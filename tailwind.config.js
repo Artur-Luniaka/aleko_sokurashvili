@@ -10,8 +10,8 @@ module.exports = {
           lg: "80px",
         },
         screens: {
-          DEFAULT: "313px",
-          lg: "1120px",
+          DEFAULT: "393px",
+          lg: "1280px",
         },
       },
       fontFamily: {

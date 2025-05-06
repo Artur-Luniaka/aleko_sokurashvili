@@ -1,9 +1,22 @@
 "use client";
 
+import Header from "./components/Header/Header";
+
 export default function Home() {
   return (
-    <div className="container">
-      <h1 className="font-manrope">Hello, World!</h1>
+    <div
+      style={{
+        background: `
+      radial-gradient(circle at 30% 40%, rgba(255,255,255,0.05), transparent 40%),
+      radial-gradient(circle at 70% 80%, rgba(0,255,255,0.07), transparent 60%),
+      linear-gradient(180deg, #0D0C1D 0%, #1E1B3A 50%, #2C2A4A 100%)
+    `,
+        minHeight: "100vh",
+      }}
+    >
+      <div className="container">
+        <Header />
+      </div>
     </div>
   );
 }

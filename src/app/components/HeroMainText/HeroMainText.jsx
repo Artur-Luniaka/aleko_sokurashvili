@@ -3,7 +3,7 @@
 const HeroMainText = () => {
   return (
     <div className="mb-11">
-      <div className="absolute bottom-[100px] left-0">
+      <div className="absolute bottom-[245px] left-0">
         <p
           className="font-raleway font-bold text-xl text-center"
           style={{

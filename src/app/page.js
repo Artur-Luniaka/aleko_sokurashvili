@@ -14,9 +14,7 @@ export default function Home() {
         minHeight: "100vh",
       }}
     >
-      <div className="container">
-        <Header />
-      </div>
+      <Header />
     </div>
   );
 }

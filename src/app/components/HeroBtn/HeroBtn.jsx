@@ -2,22 +2,22 @@
 
 const HeroBtn = () => {
   return (
-    <>
+    <div className="">
       <span className="relative">
         <button
-          className="flex justify-center items-center w-[313px] h-[60px] bg-[#fff] rounded-full font-raleway font-semibold text-sm text-[#000] mb-[11px] "
+          className="flex justify-center items-center w-[313px] h-[60px] bg-[#fff] rounded-full font-raleway font-semibold text-sm text-[#000] mb-[11px] lg:w-[534px] lg:h-[74px] lg:text-[22px]"
           style={{
             boxShadow: `inset 4px 6px 11px 4px rgba(167, 93, 243, 0.2)`,
           }}
         >
           Купить со скидкой
         </button>
-        <span className="absolute top-0 right-0 flex justify-center items-center h-[60px] px-1.5 bg-[#ff4a77] rounded-[30px] font-raleway font-semibold text-xl text-[#fff]">
+        <span className="absolute top-0 right-0 flex justify-center items-center h-[60px] px-1.5 bg-[#ff4a77] rounded-[30px] font-raleway font-semibold text-xl text-[#fff] lg:right-[586px] lg:h-[74px] lg:text-2xl lg:px-2 lg:rounded-[37px]">
           -50%
         </span>
       </span>
-      <span className="flex justify-center items-center gap-2.5">
-        <p className="font-raleway font-semibold text-xl text-[#ff4a77]">
+      <span className="flex justify-center items-center gap-2.5 lg:w-[534px]">
+        <p className="font-raleway font-semibold text-xl text-[#ff4a77] lg:text-2xl">
           1000 грн
         </p>
         <p
@@ -27,7 +27,7 @@ const HeroBtn = () => {
           2000грн
         </p>
       </span>
-    </>
+    </div>
   );
 };
 

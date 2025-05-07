@@ -6,7 +6,7 @@ const Logo = () => {
   return (
     <Link
       href="/"
-      className="font-montserrat font-bold text-base text-[#fff] uppercase lg:text-lg"
+      className="font-montserrat font-bold text-base text-[#fff] uppercase lg:text-lg lg:mr-[100px]"
     >
       Aleko{" "}
       <span

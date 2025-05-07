@@ -6,9 +6,11 @@ import HeroMainText from "../HeroMainText/HeroMainText";
 
 const HeroContentBox = () => {
   return (
-    <div className="mb-[132px] relative">
-      <HeroImg />
-      <HeroMainText />
+    <div className="mb-[132px] lg:mb-[200px] relative">
+      <div className="lg:flex lg:gap-10 lg:mb-[42px]">
+        <HeroImg />
+        <HeroMainText />
+      </div>
       <HeroBtn />
     </div>
   );

@@ -1,5 +1,6 @@
 "use client";
 import Burger from "../Burger/Burger";
+import HeaderBtn from "../HeaderBtn/HeaderBtn";
 import LangSelect from "../LangSelect/LangSelect";
 import Logo from "../Logo/Logo";
 import NavMenuDesk from "../NavMenuDesk/NavMenuDesk";
@@ -10,6 +11,7 @@ const Header = () => {
       <Logo />
       <NavMenuDesk />
       <LangSelect />
+      <HeaderBtn />
       <Burger />
     </header>
   );

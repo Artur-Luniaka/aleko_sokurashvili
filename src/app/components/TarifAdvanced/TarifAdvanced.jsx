@@ -3,13 +3,13 @@
 const TarifAdvanced = () => {
   return (
     <div
-      className="flex flex-col w-[313px] p-8 rounded-[28px] bg-[#fff] mb-[26px] relative lg:w-[360px] lg:mb-0"
+      className="flex flex-col w-[313px] p-8 rounded-[28px] bg-[#fff] mb-[26px] relative lg:w-[360px] lg:mb-0 lg:px-9 lg:py-[26px]"
       style={{
         boxShadow: `inset 4px 6px 10px 4px rgba(167, 93, 243, 0.2)`,
       }}
     >
       <span
-        className="absolute -top-5 left-[70px] w-[169px] h-[42px] rounded-[18px] flex justify-center items-center font-raleway font-bold text-base text-[#fff] uppercase"
+        className="absolute -top-5 left-[70px] w-[169px] h-[42px] rounded-[18px] flex justify-center items-center font-raleway font-bold text-base text-[#fff] uppercase lg:left-[99px] lg:top-[-25px]"
         style={{
           boxShadow: `0 4px 16px 1px rgba(0, 0, 0, 0.25)`,
           background: `linear-gradient(121deg, #5bdbfd 0%, #7375ff 40.3%, #df93ff 79.87%, #e56f8c 100%)`,
@@ -68,7 +68,7 @@ const TarifAdvanced = () => {
           </p>
         </li>
       </ul>
-      <button className="flex justify-center items-center w-[248px] h-[47px] bg-[#0c0117] rounded-[52px] font-manrope font-semibold text-sm text-[#fff] lg:w-[287px] lg:h-[57px]">
+      <button className="flex justify-center items-center w-[248px] h-[47px] bg-[#0c0117] rounded-[52px] font-manrope font-semibold text-sm text-[#fff] lg:w-[287px] lg:h-[57px] lg:text-base lg:mt-auto">
         Купить
       </button>
     </div>

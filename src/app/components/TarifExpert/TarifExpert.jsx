@@ -3,7 +3,7 @@
 const TarifExpert = () => {
   return (
     <div
-      className="flex flex-col w-[313px] p-8 rounded-[28px] lg:w-[360px]"
+      className="flex flex-col w-[313px] p-8 rounded-[28px] lg:w-[360px] lg:px-9 lg:py-[26px]"
       style={{
         boxShadow: `inset 4px 6px 10px 4px rgba(167, 93, 243, 0.2)`,
         background: `linear-gradient(121deg, #5bdbfd 0%, #7375ff 40.3%, #df93ff 79.87%, #e56f8c 100%)`,
@@ -60,7 +60,7 @@ const TarifExpert = () => {
           </p>
         </li>
       </ul>
-      <button className="flex justify-center items-center w-[248px] h-[47px] bg-[#0c0117] rounded-[52px] font-manrope font-semibold text-sm text-[#fff] lg:w-[287px] lg:h-[57px]">
+      <button className="flex justify-center items-center w-[248px] h-[47px] bg-[#0c0117] rounded-[52px] font-manrope font-semibold text-sm text-[#fff] lg:w-[287px] lg:h-[57px] lg:text-base">
         Купить
       </button>
     </div>

@@ -3,7 +3,7 @@
 const TarifAdvanced = () => {
   return (
     <div
-      className="flex flex-col w-[313px] p-8 rounded-[28px] bg-[#fff] mb-[26px] relative"
+      className="flex flex-col w-[313px] p-8 rounded-[28px] bg-[#fff] mb-[26px] relative lg:w-[360px] lg:mb-0"
       style={{
         boxShadow: `inset 4px 6px 10px 4px rgba(167, 93, 243, 0.2)`,
       }}
@@ -17,11 +17,11 @@ const TarifAdvanced = () => {
       >
         Best seller
       </span>
-      <span className="flex gap-[30px] mb-[18px]">
-        <h3 className="font-raleway font-semibold text-base text-[#0c0117] uppercase my-auto">
+      <span className="flex justify-between gap-[30px] mb-[18px]">
+        <h3 className="font-raleway font-semibold text-base text-[#0c0117] uppercase my-auto lg:text-xl">
           Продвинутий
         </h3>
-        <span className="flex justify-center items-center w-[100px] h-[42px] bg-[#0c0117] rounded-[30px]">
+        <span className="flex justify-center items-center w-[100px] h-[42px] bg-[#0c0117] rounded-[30px] lg:w-[119px]">
           <p
             className="font-raleway font-bold text-base"
             style={{
@@ -35,7 +35,7 @@ const TarifAdvanced = () => {
         </span>
       </span>
       <span className="flex items-end gap-[22px] mb-[29px]">
-        <p className="font-manrope font-bold text-[64px] uppercase text-[#0c0117]">
+        <p className="font-manrope font-bold text-[64px] uppercase text-[#0c0117] lg:text-[74px]">
           149 $
         </p>
         <p className="font-manrope font-bold text-xl uppercase text-[#0c0117] line-through">
@@ -68,7 +68,7 @@ const TarifAdvanced = () => {
           </p>
         </li>
       </ul>
-      <button className="flex justify-center items-center w-[248px] h-[47px] bg-[#0c0117] rounded-[52px] font-manrope font-semibold text-sm text-[#fff]">
+      <button className="flex justify-center items-center w-[248px] h-[47px] bg-[#0c0117] rounded-[52px] font-manrope font-semibold text-sm text-[#fff] lg:w-[287px] lg:h-[57px]">
         Купить
       </button>
     </div>

@@ -6,13 +6,15 @@ import TarifExpert from "../TarifExpert/TarifExpert";
 
 const TariffsContentBox = () => {
   return (
-    <div className="mb-[76px]">
-      <h2 className="font-raleway font-bold text-2xl text-[#fff] uppercase mb-7 text-center">
+    <div className="mb-[76px] lg:mb-[201px]">
+      <h2 className="font-raleway font-bold text-2xl text-[#fff] uppercase mb-7 text-center lg:text-5xl lg:mb-[79px]">
         Тарифы
       </h2>
-      <TarifBasic />
-      <TarifAdvanced />
-      <TarifExpert />
+      <div className="lg:flex lg:gap-5">
+        <TarifBasic />
+        <TarifAdvanced />
+        <TarifExpert />
+      </div>
     </div>
   );
 };

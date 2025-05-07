@@ -3,7 +3,7 @@
 const TarifBasic = () => {
   return (
     <div
-      className="flex flex-col w-[313px] p-8 rounded-[28px] mb-[47px]"
+      className="flex flex-col w-[313px] p-8 rounded-[28px] mb-[47px] lg:w-[360px] lg:mb-0"
       style={{
         background: `
       radial-gradient(circle at 30% 40%, rgba(255,255,255,0.05), transparent 40%),
@@ -13,18 +13,18 @@ const TarifBasic = () => {
         boxShadow: `inset 4px 6px 10px 4px rgba(167, 93, 243, 0.2)`,
       }}
     >
-      <h3 className="font-raleway font-semibold text-base text-[#fff] uppercase mb-[18px]">
+      <h3 className="font-raleway font-semibold text-base text-[#fff] uppercase mb-[18px] lg:text-xl">
         Базовый
       </h3>
       <span className="flex items-end gap-[22px] mb-[29px]">
-        <p className="font-manrope font-bold text-[64px] uppercase text-[#fff]">
+        <p className="font-manrope font-bold text-[64px] uppercase text-[#fff] lg:text-[74px]">
           99 $
         </p>
         <p className="font-manrope font-bold text-xl uppercase text-[#fff] line-through">
           139$
         </p>
       </span>
-      <ul className="flex flex-col gap-[14px] mb-[110px]">
+      <ul className="flex flex-col gap-[14px] mb-[110px] lg:mb-[133px]">
         <li className="relative">
           <span className="absolute top-[3px] left-0 w-[18px] h-[18px] bg-[#fff] rounded-full" />
           <p className="font-raleway font-semibold text-base text-[#fff] uppercase pl-7">
@@ -38,7 +38,7 @@ const TarifBasic = () => {
           </p>
         </li>
       </ul>
-      <button className="flex justify-center items-center w-[248px] h-[47px] bg-[#fff] rounded-[52px] font-manrope font-semibold text-sm text-[#0c0117]">
+      <button className="flex justify-center items-center w-[248px] h-[47px] bg-[#fff] rounded-[52px] font-manrope font-semibold text-sm text-[#0c0117] lg:w-[287px] lg:h-[57px]">
         Купить
       </button>
     </div>

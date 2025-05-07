@@ -3,14 +3,14 @@
 const TarifExpert = () => {
   return (
     <div
-      className="flex flex-col w-[313px] p-8 rounded-[28px]"
+      className="flex flex-col w-[313px] p-8 rounded-[28px] lg:w-[360px]"
       style={{
         boxShadow: `inset 4px 6px 10px 4px rgba(167, 93, 243, 0.2)`,
         background: `linear-gradient(121deg, #5bdbfd 0%, #7375ff 40.3%, #df93ff 79.87%, #e56f8c 100%)`,
       }}
     >
       <span className="flex justify-between gap-[30px] mb-[18px]">
-        <h3 className="font-raleway font-semibold text-base text-[#fff] uppercase my-auto">
+        <h3 className="font-raleway font-semibold text-base text-[#fff] uppercase my-auto lg:text-xl">
           ЭКСПЕРТ
         </h3>
         <span className="flex justify-center items-center w-[119px] h-[42px] bg-[#fff] rounded-[30px]">
@@ -27,7 +27,7 @@ const TarifExpert = () => {
         </span>
       </span>
       <span className="flex items-end gap-[22px] mb-[29px]">
-        <p className="font-manrope font-bold text-[64px] uppercase text-[#fff]">
+        <p className="font-manrope font-bold text-[64px] uppercase text-[#fff] lg:text-[74px]">
           299 $
         </p>
         <p className="font-manrope font-bold text-xl uppercase text-[#fff] line-through">
@@ -60,7 +60,7 @@ const TarifExpert = () => {
           </p>
         </li>
       </ul>
-      <button className="flex justify-center items-center w-[248px] h-[47px] bg-[#0c0117] rounded-[52px] font-manrope font-semibold text-sm text-[#fff]">
+      <button className="flex justify-center items-center w-[248px] h-[47px] bg-[#0c0117] rounded-[52px] font-manrope font-semibold text-sm text-[#fff] lg:w-[287px] lg:h-[57px]">
         Купить
       </button>
     </div>

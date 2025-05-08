@@ -3,7 +3,7 @@
 import Image from "next/image";
 import closeBtn from "../../../../public/close-btn.svg";
 import * as yup from "yup";
-import { Field, Form, Formik } from "formik";
+import { ErrorMessage, Field, Form, Formik } from "formik";
 
 const ByNowFormMob = () => {
   const initialValues = {
@@ -59,7 +59,12 @@ const ByNowFormMob = () => {
                 type="text"
                 name="name"
                 placeholder="Имя"
-                className="w-[310px] rounded-[14px] px-5 py-[15px] mb-[18px]"
+                className="w-[310px] rounded-[14px] px-5 py-[15px] mb-[18px] placeholder:font-raleway placeholder:font-normal placeholder:text-sm placeholder:text-[#0c0117]"
+              />
+              <ErrorMessage
+                name="name"
+                component="span"
+                className="font-raleway font-normal text-xs text-red-600"
               />
             </div>
             <div className="w-[310px] mx-auto relative">
@@ -67,7 +72,7 @@ const ByNowFormMob = () => {
                 type="text"
                 name="nickname"
                 placeholder="Ник Telegram"
-                className="w-[310px] rounded-[14px] px-5 py-[15px] mb-[18px]"
+                className="w-[310px] rounded-[14px] px-5 py-[15px] mb-[18px] placeholder:font-raleway placeholder:font-normal placeholder:text-sm placeholder:text-[#0c0117]"
               />
             </div>
             <div className="w-[310px] mx-auto relative">
@@ -75,12 +80,12 @@ const ByNowFormMob = () => {
                 type="text"
                 name="email"
                 placeholder="Email"
-                className="w-[310px] rounded-[14px] px-5 py-[15px]"
+                className="w-[310px] rounded-[14px] px-5 py-[15px] placeholder:font-raleway placeholder:font-normal placeholder:text-sm placeholder:text-[#0c0117]"
               />
             </div>
             <button
               type="submit"
-              className="flex justify-center items-center mt-auto w-[317px]"
+              className="flex justify-center items-center mt-auto w-[317px] h-[50px] rounded-[10px] bg-[#fff] font-raleway font-semibold text-sm text-[#0c0117]"
             >
               Отправить
             </button>

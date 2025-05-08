@@ -5,7 +5,7 @@ import closeBtn from "../../../../public/close-btn.svg";
 import * as yup from "yup";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 
-const ByNowFormMob = () => {
+const ByNowFormMob = ({ setIsOpen, handleModalClick }) => {
   const initialValues = {
     name: "",
     nickname: "",
@@ -30,9 +30,15 @@ const ByNowFormMob = () => {
       .required("Please, enter email!"),
   });
 
+  const handleSubmit = (values, actions) => {
+    console.log(values);
+    actions.resetForm();
+    setIsOpen(false);
+  };
+
   return (
     <div
-      className="w-full h-screen fixed z-10 flex justify-center items-center"
+      className="w-full h-screen fixed z-10 flex justify-center items-center lg:hidden"
       style={{
         background: `
       radial-gradient(circle at 30% 40%, rgba(255,255,255,0.05), transparent 40%),
@@ -41,18 +47,26 @@ const ByNowFormMob = () => {
     `,
       }}
     >
-      <div className="w-[393px] h-full p-[32px] flex flex-col">
+      <div
+        className="w-[393px] h-full p-[32px] flex flex-col"
+        onClick={handleModalClick}
+      >
         <Image
           src={closeBtn}
           alt="modal close button"
           width={18}
           height={18}
-          className="flex ml-auto mb-auto"
+          className="flex ml-auto mb-auto cursor-pointer"
+          onClick={() => setIsOpen(false)}
         />
         <h2 className="font-raleway font-bold text-2xl text-[#fff] uppercase mt-[93px] mb-[36px] text-center">
           Укажите свои данные
         </h2>
-        <Formik>
+        <Formik
+          initialValues={initialValues}
+          validationSchema={validationForm}
+          onSubmit={handleSubmit}
+        >
           <Form className="flex flex-col grow">
             <div className="w-[310px] mx-auto relative">
               <Field
@@ -64,7 +78,7 @@ const ByNowFormMob = () => {
               <ErrorMessage
                 name="name"
                 component="span"
-                className="font-raleway font-normal text-xs text-red-600"
+                className="font-raleway font-normal text-xs text-white absolute bottom-[3px] left-0"
               />
             </div>
             <div className="w-[310px] mx-auto relative">
@@ -74,13 +88,23 @@ const ByNowFormMob = () => {
                 placeholder="Ник Telegram"
                 className="w-[310px] rounded-[14px] px-5 py-[15px] mb-[18px] placeholder:font-raleway placeholder:font-normal placeholder:text-sm placeholder:text-[#0c0117]"
               />
+              <ErrorMessage
+                name="nickname"
+                component="span"
+                className="font-raleway font-normal text-xs text-white absolute bottom-[3px] left-0"
+              />
             </div>
             <div className="w-[310px] mx-auto relative">
               <Field
                 type="text"
                 name="email"
                 placeholder="Email"
-                className="w-[310px] rounded-[14px] px-5 py-[15px] placeholder:font-raleway placeholder:font-normal placeholder:text-sm placeholder:text-[#0c0117]"
+                className="w-[310px] rounded-[14px] px-5 py-[15px] mb-[18px] placeholder:font-raleway placeholder:font-normal placeholder:text-sm placeholder:text-[#0c0117]"
+              />
+              <ErrorMessage
+                name="email"
+                component="span"
+                className="font-raleway font-normal text-xs text-white absolute bottom-[3px] left-0"
               />
             </div>
             <button

@@ -4,12 +4,12 @@ import AdditionalBanner from "../AdditionalBanner/AdditionalBanner";
 import HeroContentBox from "../HeroContentBox/HeroContentBox";
 import TariffsContentBox from "../TariffsContentBox/TariffsContentBox";
 
-const MainContent = () => {
+const MainContent = ({ setIsOpen }) => {
   return (
     <>
       <div className="container">
-        <HeroContentBox />
-        <TariffsContentBox />
+        <HeroContentBox setIsOpen={setIsOpen} />
+        <TariffsContentBox setIsOpen={setIsOpen} />
       </div>
       <div
         className="mb-12 lg:hidden"
@@ -23,7 +23,7 @@ const MainContent = () => {
           borderRadius: `8px`,
         }}
       >
-        <AdditionalBanner />
+        <AdditionalBanner setIsOpen={setIsOpen} />
       </div>
       <div
         className="hidden lg:block lg:bg-no-repeat lg:bg-center lg:bg-cover mb-[59px]"
@@ -36,7 +36,7 @@ const MainContent = () => {
           height: `488px`,
         }}
       >
-        <AdditionalBanner />
+        <AdditionalBanner setIsOpen={setIsOpen} />
       </div>
     </>
   );

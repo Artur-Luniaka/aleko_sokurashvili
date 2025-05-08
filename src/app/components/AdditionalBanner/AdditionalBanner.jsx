@@ -1,6 +1,6 @@
 "use client";
 
-const AdditionalBanner = () => {
+const AdditionalBanner = ({ setIsOpen }) => {
   return (
     <div className="container flex flex-col my-[113px] lg:mt-[60px] lg:mb-[80px]">
       <div className="lg:w-[447px] lg:mx-auto">
@@ -28,6 +28,7 @@ const AdditionalBanner = () => {
             boxShadow: `inset 4px 6px 10px 4px rgba(167, 93, 243, 0.2)`,
             background: `linear-gradient(121deg, #5bdbfd 0%, #7375ff 40.3%, #df93ff 79.87%, #e56f8c 100%)`,
           }}
+          onClick={setIsOpen}
         >
           <span className="font-raleway font-semibold text-sm text-[#fff] mr-[29px] lg:text-[22px] lg:mr-0">
             Купить со скидкой

@@ -1,10 +1,29 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import ByNowFormMob from "./components/ByNowFormMob/ByNowFormMob";
 import Header from "./components/Header/Header";
 import MainContent from "./components/MainContent/MainContent";
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const listener = (e) => {
+      if (e.key === "Escape") {
+        setIsOpen();
+      }
+    };
+
+    window.addEventListener("keydown", listener);
+
+    return () => window.removeEventListener("keydown", listener);
+  }, [setIsOpen]);
+
+  const handleModalClick = (e) => {
+    e.stopPropagation();
+  };
+
   return (
     <div
       className="min-h-screen flex flex-col"
@@ -16,9 +35,14 @@ export default function Home() {
     `,
       }}
     >
-      <Header />
-      <MainContent />
-      <ByNowFormMob />
+      <Header setIsOpen={setIsOpen} />
+      <MainContent setIsOpen={setIsOpen} />
+      {isOpen && (
+        <ByNowFormMob
+          setIsOpen={setIsOpen}
+          handleModalClick={handleModalClick}
+        />
+      )}
     </div>
   );
 }

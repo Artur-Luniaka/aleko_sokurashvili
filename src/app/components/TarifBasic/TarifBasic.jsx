@@ -1,6 +1,6 @@
 "use client";
 
-const TarifBasic = () => {
+const TarifBasic = ({ setIsOpen }) => {
   return (
     <div
       className="flex flex-col w-[313px] p-8 rounded-[28px] mb-[47px] lg:w-[360px] lg:mb-0 lg:px-9 lg:pt-9 lg:pb-[26px]"
@@ -38,7 +38,10 @@ const TarifBasic = () => {
           </p>
         </li>
       </ul>
-      <button className="flex justify-center items-center w-[248px] h-[47px] bg-[#fff] rounded-[52px] font-manrope font-semibold text-sm text-[#0c0117] lg:w-[287px] lg:h-[57px] lg:text-base lg:mt-auto">
+      <button
+        className="flex justify-center items-center w-[248px] h-[47px] bg-[#fff] rounded-[52px] font-manrope font-semibold text-sm text-[#0c0117] lg:w-[287px] lg:h-[57px] lg:text-base lg:mt-auto"
+        onClick={setIsOpen}
+      >
         Купить
       </button>
     </div>

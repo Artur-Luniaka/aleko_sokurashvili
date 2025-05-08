@@ -1,6 +1,6 @@
 "use client";
 
-const HeroBtn = () => {
+const HeroBtn = ({ setIsOpen }) => {
   return (
     <>
       <div className="lg:w-[534px] relative">
@@ -9,6 +9,7 @@ const HeroBtn = () => {
           style={{
             boxShadow: `inset 4px 6px 11px 4px rgba(167, 93, 243, 0.2)`,
           }}
+          onClick={setIsOpen}
         >
           Купить со скидкой
         </button>

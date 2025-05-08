@@ -109,7 +109,7 @@ const ByNowFormMob = ({ setIsOpen, handleModalClick }) => {
             </div>
             <button
               type="submit"
-              className="flex justify-center items-center mt-auto w-[317px] h-[50px] rounded-[10px] bg-[#fff] font-raleway font-semibold text-sm text-[#0c0117]"
+              className="flex justify-center items-center mt-auto mx-auto w-[317px] h-[50px] rounded-[10px] bg-[#fff] font-raleway font-semibold text-sm text-[#0c0117]"
             >
               Отправить
             </button>

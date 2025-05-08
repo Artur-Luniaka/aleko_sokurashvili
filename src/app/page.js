@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import ByNowFormMob from "./components/ByNowFormMob/ByNowFormMob";
 import Header from "./components/Header/Header";
 import MainContent from "./components/MainContent/MainContent";
+import ByNowFormDesk from "./components/ByNowFormDesk/ByNowFormDesk";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,7 +37,15 @@ export default function Home() {
       }}
     >
       <Header setIsOpen={setIsOpen} />
-      <MainContent setIsOpen={setIsOpen} />
+      {isOpen ? (
+        <ByNowFormDesk
+          setIsOpen={setIsOpen}
+          handleModalClick={handleModalClick}
+        />
+      ) : (
+        <MainContent setIsOpen={setIsOpen} />
+      )}
+
       {isOpen && (
         <ByNowFormMob
           setIsOpen={setIsOpen}

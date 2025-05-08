@@ -1,12 +1,18 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 const TarifAdvanced = ({ setIsOpen }) => {
   return (
-    <div
+    <motion.div
       className="flex flex-col w-[313px] p-8 rounded-[28px] bg-[#fff] mb-[26px] relative lg:w-[360px] lg:mb-0 lg:px-9 lg:py-[26px]"
       style={{
         boxShadow: `inset 4px 6px 10px 4px rgba(167, 93, 243, 0.2)`,
       }}
+      initial={{ y: 100, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.2 }}
     >
       <span
         className="absolute -top-5 left-[70px] w-[169px] h-[42px] rounded-[18px] flex justify-center items-center font-raleway font-bold text-base text-[#fff] uppercase lg:left-[99px] lg:top-[-25px]"
@@ -74,7 +80,7 @@ const TarifAdvanced = ({ setIsOpen }) => {
       >
         Купить
       </button>
-    </div>
+    </motion.div>
   );
 };
 

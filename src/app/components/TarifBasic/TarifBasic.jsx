@@ -1,8 +1,10 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 const TarifBasic = ({ setIsOpen }) => {
   return (
-    <div
+    <motion.div
       className="flex flex-col w-[313px] p-8 rounded-[28px] mb-[47px] lg:w-[360px] lg:mb-0 lg:px-9 lg:pt-9 lg:pb-[26px]"
       style={{
         background: `
@@ -12,6 +14,10 @@ const TarifBasic = ({ setIsOpen }) => {
     `,
         boxShadow: `inset 4px 6px 10px 4px rgba(167, 93, 243, 0.2)`,
       }}
+      initial={{ x: -100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.2 }}
     >
       <h3 className="font-raleway font-semibold text-base text-[#fff] uppercase mb-[18px] lg:text-xl">
         Базовый
@@ -44,7 +50,7 @@ const TarifBasic = ({ setIsOpen }) => {
       >
         Купить
       </button>
-    </div>
+    </motion.div>
   );
 };
 

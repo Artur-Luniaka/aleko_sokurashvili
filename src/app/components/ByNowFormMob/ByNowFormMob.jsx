@@ -5,6 +5,7 @@ import closeBtn from "../../../../public/close-btn.svg";
 import * as yup from "yup";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import axios from "axios";
+import { motion } from "framer-motion";
 
 const ByNowFormMob = ({ setIsOpen, handleModalClick }) => {
   const initialValues = {
@@ -55,7 +56,7 @@ const ByNowFormMob = ({ setIsOpen, handleModalClick }) => {
   };
 
   return (
-    <div
+    <motion.div
       className="w-full h-screen fixed z-10 flex justify-center lg:hidden"
       style={{
         background: `
@@ -64,6 +65,9 @@ const ByNowFormMob = ({ setIsOpen, handleModalClick }) => {
       linear-gradient(180deg, #0D0C1D 0%, #1E1B3A 50%, #2C2A4A 100%)
     `,
       }}
+      initial={{ opacity: 0, y: -100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
     >
       <div
         className="flex flex-col w-[393px] h-screen p-[32px] overflow-y-auto"
@@ -134,7 +138,7 @@ const ByNowFormMob = ({ setIsOpen, handleModalClick }) => {
           </Form>
         </Formik>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

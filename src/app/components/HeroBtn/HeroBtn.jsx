@@ -1,8 +1,14 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 const HeroBtn = ({ setIsOpen }) => {
   return (
-    <>
+    <motion.div
+      initial={{ x: -100, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+    >
       <div className="lg:w-[534px] relative">
         <button
           className="flex justify-center items-center w-[313px] h-[60px] bg-[#fff] rounded-full font-raleway font-semibold text-sm text-[#000] mb-[11px] lg:w-[534px] lg:h-[74px] lg:text-[22px]"
@@ -28,7 +34,7 @@ const HeroBtn = ({ setIsOpen }) => {
           2000грн
         </p>
       </span>
-    </>
+    </motion.div>
   );
 };
 

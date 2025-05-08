@@ -5,6 +5,7 @@ import closeBtn from "../../../../public/close-btn.svg";
 import * as yup from "yup";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import axios from "axios";
+import { motion } from "framer-motion";
 
 const ByNowFormDesk = ({ setIsOpen, handleModalClick }) => {
   const initialValues = {
@@ -55,13 +56,16 @@ const ByNowFormDesk = ({ setIsOpen, handleModalClick }) => {
   };
 
   return (
-    <div
+    <motion.div
       className="hidden lg:flex flex-col w-[410px] px-[28px] pt-[28px] pb-[73px] rounded-[28px] mx-auto "
       style={{
         boxShadow: `inset 4px 6px 10px 4px rgba(167, 93, 243, 0.2)`,
         background: `#0c0117`,
       }}
       onClick={handleModalClick}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
     >
       <Image
         src={closeBtn}
@@ -127,7 +131,7 @@ const ByNowFormDesk = ({ setIsOpen, handleModalClick }) => {
           </button>
         </Form>
       </Formik>
-    </div>
+    </motion.div>
   );
 };
 

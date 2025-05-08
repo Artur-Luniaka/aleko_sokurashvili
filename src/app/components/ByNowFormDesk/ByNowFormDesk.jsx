@@ -4,6 +4,7 @@ import Image from "next/image";
 import closeBtn from "../../../../public/close-btn.svg";
 import * as yup from "yup";
 import { ErrorMessage, Field, Form, Formik } from "formik";
+import axios from "axios";
 
 const ByNowFormDesk = ({ setIsOpen, handleModalClick }) => {
   const initialValues = {
@@ -30,10 +31,27 @@ const ByNowFormDesk = ({ setIsOpen, handleModalClick }) => {
       .required("Please, enter email!"),
   });
 
-  const handleSubmit = (values, actions) => {
-    console.log(values);
-    actions.resetForm();
-    setIsOpen(false);
+  const handleSubmit = async (values, actions) => {
+    try {
+      const token = "7994861974:AAFAVntfKtZPnIqtlNtYU9al1ba9IrmZTIE";
+      const chatId = "769149180";
+
+      const url = `https://api.telegram.org/bot${token}/sendMessage`;
+
+      const res = await axios.post(url, {
+        chat_id: chatId,
+        text: `Name: ${values.name}\nNickname: ${values.nickname}\nEmail: ${values.email}`,
+      });
+
+      if (res.status === 200) {
+        alert("Повідомлення надіслано!🥳");
+        actions.resetForm();
+        setIsOpen(false);
+      }
+    } catch (err) {
+      console.error("Error:", err);
+      alert("Сталася помилка 😢");
+    }
   };
 
   return (

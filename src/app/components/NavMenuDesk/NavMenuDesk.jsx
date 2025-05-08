@@ -9,7 +9,7 @@ const NavMenuDesk = () => {
         <li>
           <Link
             href="/"
-            className="font-raleway font-medium text-base text-[#fff]"
+            className="font-raleway font-medium text-base text-[#fff] hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-[#ff4a77] to-[#ffbb77] transition-colors duration-300"
           >
             Структура
           </Link>
@@ -17,7 +17,7 @@ const NavMenuDesk = () => {
         <li>
           <Link
             href="/"
-            className="font-raleway font-medium text-base text-[#fff]"
+            className="font-raleway font-medium text-base text-[#fff] hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-[#ff4a77] to-[#ffbb77] transition-colors duration-300"
           >
             Обо мне
           </Link>
@@ -25,7 +25,7 @@ const NavMenuDesk = () => {
         <li>
           <Link
             href="/"
-            className="font-raleway font-medium text-base text-[#fff]"
+            className="font-raleway font-medium text-base text-[#fff] hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-[#ff4a77] to-[#ffbb77] transition-colors duration-300"
           >
             Плюсы
           </Link>
@@ -33,7 +33,7 @@ const NavMenuDesk = () => {
         <li>
           <Link
             href="/"
-            className="font-raleway font-medium text-base text-[#fff]"
+            className="font-raleway font-medium text-base text-[#fff] hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-[#ff4a77] to-[#ffbb77] transition-colors duration-300"
           >
             Отзывы
           </Link>
@@ -41,7 +41,7 @@ const NavMenuDesk = () => {
         <li>
           <Link
             href="/"
-            className="font-raleway font-medium text-base text-[#fff]"
+            className="font-raleway font-medium text-base text-[#fff] hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-[#ff4a77] to-[#ffbb77] transition-colors duration-300"
           >
             FAQ
           </Link>

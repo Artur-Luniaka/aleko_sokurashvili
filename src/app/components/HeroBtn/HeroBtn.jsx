@@ -9,7 +9,7 @@ const HeroBtn = ({ setIsOpen }) => {
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 1, ease: "easeOut" }}
     >
-      <div className="lg:w-[534px] relative">
+      <div className="lg:w-[534px] relative hover:scale-105 transition-transform duration-300">
         <button
           className="flex justify-center items-center w-[313px] h-[60px] bg-[#fff] rounded-full font-raleway font-semibold text-sm text-[#000] mb-[11px] lg:w-[534px] lg:h-[74px] lg:text-[22px]"
           style={{

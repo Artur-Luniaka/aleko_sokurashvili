@@ -42,6 +42,7 @@ const AdditionalBanner = ({ setIsOpen }) => {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.2 }}
+        whileHover={{ scale: 1.05 }}
       >
         <button
           className="flex justify-center items-center w-[268px] h-[68px] rounded-[40px] lg:w-[534px]"

@@ -67,7 +67,7 @@ const TarifExpert = ({ setIsOpen }) => {
         </li>
       </ul>
       <button
-        className="flex justify-center items-center w-[248px] h-[47px] bg-[#0c0117] rounded-[52px] font-manrope font-semibold text-sm text-[#fff] lg:w-[287px] lg:h-[57px] lg:text-base"
+        className="flex justify-center items-center w-[248px] h-[47px] bg-[#0c0117] rounded-[52px] font-manrope font-semibold text-sm text-[#fff] lg:w-[287px] lg:h-[57px] lg:text-base hover:scale-105 transition-transform duration-300"
         onClick={setIsOpen}
       >
         Купить

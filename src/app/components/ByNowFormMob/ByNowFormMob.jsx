@@ -66,7 +66,7 @@ const ByNowFormMob = ({ setIsOpen, handleModalClick }) => {
       }}
     >
       <div
-        className="w-[393px] h-full p-[32px] flex flex-col"
+        className="w-[393px] h-screen p-[32px] flex flex-col overflow-y-auto"
         onClick={handleModalClick}
       >
         <Image

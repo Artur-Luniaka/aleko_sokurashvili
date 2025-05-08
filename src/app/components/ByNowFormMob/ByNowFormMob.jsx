@@ -56,7 +56,7 @@ const ByNowFormMob = ({ setIsOpen, handleModalClick }) => {
 
   return (
     <div
-      className="w-full h-screen fixed z-10 flex justify-center items-center lg:hidden"
+      className="w-full h-screen fixed z-10 flex justify-center lg:hidden"
       style={{
         background: `
       radial-gradient(circle at 30% 40%, rgba(255,255,255,0.05), transparent 40%),
@@ -66,7 +66,7 @@ const ByNowFormMob = ({ setIsOpen, handleModalClick }) => {
       }}
     >
       <div
-        className="w-[393px] h-screen p-[32px] flex flex-col overflow-y-auto"
+        className="flex flex-col w-[393px] h-screen p-[32px] overflow-y-auto"
         onClick={handleModalClick}
       >
         <Image
@@ -74,7 +74,7 @@ const ByNowFormMob = ({ setIsOpen, handleModalClick }) => {
           alt="modal close button"
           width={18}
           height={18}
-          className="flex ml-auto mb-auto cursor-pointer"
+          className="flex ml-auto cursor-pointer"
           onClick={() => setIsOpen(false)}
         />
         <h2 className="font-raleway font-bold text-2xl text-[#fff] uppercase mt-[93px] mb-[36px] text-center">
